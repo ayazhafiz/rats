@@ -35,3 +35,14 @@ alias).
 
 But the `Infinity` value is not assignable to a value of type `Inf` because the
 `Infinity` value is a number type. Makes sense.
+
+## Uninitialized self-reference not caught in IIFE
+
+[playground](https://www.typescriptlang.org/play?#code/DYUwLgBAxgXBCGA7AnhAvBAFJglOgfNDrgNxA)
+
+```typescript
+let c: any = (() => c)();
+```
+
+TypeScript thinks `c` is in scope of the IIFE, but in fact is not initialized until after the IIFE
+is evaluated. At runtime, this throws a reference error.
