@@ -2,6 +2,17 @@
 
 Where TypeScript doesn't save you, or doesn't do what you want.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Lossy type downcasting](#lossy-type-downcasting)
+- [Infinity is not of type Infinity](#infinity-is-not-of-type-infinity)
+- [Uninitialized self-reference not caught in IIFE](#uninitialized-self-reference-not-caught-in-iife)
+- [Numbers permitted in string index type](#numbers-permitted-in-string-index-type)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Lossy type downcasting
 
 [playground](https://www.typescriptlang.org/play/#code/DYUwLgBGBcEN4QIawHYFcC2AjEAnCAvhALzxKwCMhA3AFCiRqxxGlh0MQBuzSA-LADOYXAEsUAc0IkIaOrVEAzCAAouAOkQQAhMVJoUAExCLxIQwEp4tCLaShcYNZvVgA9gFUADl7wBhREEQFQsLaggAegiILDc3DG1aAiA)
