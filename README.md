@@ -46,3 +46,17 @@ let c: any = (() => c)();
 
 TypeScript thinks `c` is in scope of the IIFE, but in fact is not initialized until after the IIFE
 is evaluated. At runtime, this throws a reference error.
+
+## Numbers permitted in string index type
+
+[playground](https://www.typescriptlang.org/play?#code/MYewdgzgLgBAtgQwA4C4YG8DaBrN0BOAlmAOYC6eURpAvjALwYBQMMAjGgOScA0TNQA)
+
+```typescript
+const map: {[k: string]: string} = {
+  1: '',
+}
+```
+
+This typechecks, but `const map: {[k: number]: string} = {'one': ''}` wouldn't. The runtime types
+are semantically correct because object properties are strings, but accepting a number where strings
+are expected isn't desirable during development.
